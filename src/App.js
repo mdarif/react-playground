@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import NumberList from './components/numberList'
+import Toggle from './components/handlingEvents'
+import useLocalStorage from './CustomHooks/useLocalStorage'
+import useUpdateLogger from './CustomHooks/useUpdateLogger'
+import UseReducer from './components/UseReducer'
 
-function App() {
+function App () {
+  // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  // return <NumberList numbers={numbers} />
+  return <UseReducer />
+  /*   const [name, setName] = useLocalStorage('name', '')
+  useUpdateLogger(name)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <input type='text' value={name} onChange={e => setName(e.target.value)} />
+  ) */
 }
 
-export default App;
+export default App
