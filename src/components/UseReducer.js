@@ -9,9 +9,6 @@ const ACTIONS = {
  * A reducer function is where you will put your state logic.
  * It takes two arguments, the current state and the action
  * object, and it returns the next state:
- * @param {*} state
- * @param {*} action
- * @returns
  */
 
 function reducer (state, action) {
