@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+/**
+ * Source: https://beta.reactjs.org/learn/updating-arrays-in-state
+ */
+
 const initialProducts = [
   {
     id: 0,

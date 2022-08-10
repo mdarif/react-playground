@@ -9,6 +9,8 @@ import { useState } from 'react'
  *
  * If you press ”–” when the count is 1, the product should
  * automatically get removed from the cart. Make sure it never shows 0.
+ *
+ * Source: https://beta.reactjs.org/learn/updating-arrays-in-state
  */
 
 const initialProducts = [
