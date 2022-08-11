@@ -7,7 +7,7 @@ import UseReducer from './components/UseReducer'
 import Counter from './components/Counter'
 import UpdateShoppingCartItems from './components/UpdateShoppingCartItems'
 import MultipleSelection from './components/MultipleSelection'
-import FilteringAList from './components/FilertingAList'
+import FilteringAList from './components/FilteringAList'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
