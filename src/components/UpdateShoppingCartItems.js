@@ -22,7 +22,7 @@ const initialProducts = [
   }
 ]
 
-export default function ShoppingCart () {
+export default function UpdateShoppingCartItems () {
   const [products, setProducts] = useState(initialProducts)
 
   function handleIncreaseClick (productId) {

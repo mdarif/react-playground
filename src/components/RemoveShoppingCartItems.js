@@ -31,7 +31,7 @@ const initialProducts = [
   }
 ]
 
-export default function ShoppingCart () {
+export default function RemoveShoppingCartItems () {
   const [products, setProducts] = useState(initialProducts)
 
   function handleIncreaseClick (productId) {
@@ -71,26 +71,30 @@ export default function ShoppingCart () {
   }
 
   return (
-    <ul>
-      {products.map(product => (
-        <li key={product.id}>
-          {product.name} (<b>{product.count}</b>)
-          <button
-            onClick={() => {
-              handleIncreaseClick(product.id)
-            }}
-          >
-            +
-          </button>
-          <button
-            onClick={() => {
-              handleDecreaseClick(product.id)
-            }}
-          >
-            –
-          </button>
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2>Remove the item if count is 0</h2>
+      {JSON.stringify(products)}
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>
+            {product.name} (<b>{product.count}</b>){' '}
+            <button
+              onClick={() => {
+                handleIncreaseClick(product.id)
+              }}
+            >
+              +
+            </button>{' '}
+            <button
+              onClick={() => {
+                handleDecreaseClick(product.id)
+              }}
+            >
+              –
+            </button>
+          </li>
+        ))}
+      </ul>
+    </>
   )
 }
