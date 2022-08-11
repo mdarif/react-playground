@@ -6,13 +6,17 @@ import useUpdateLogger from './CustomHooks/useUpdateLogger'
 import UseReducer from './components/UseReducer'
 import Counter from './components/Counter'
 import UpdateShoppingCartItems from './components/UpdateShoppingCartItems'
+import MultipleSelection from './components/MultipleSelection'
+import FilteringAList from './components/FilertingAList'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
   // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   // return <NumberList numbers={numbers} />
   // return <Counter />
-  return <UpdateShoppingCartItems />
+  // return <UpdateShoppingCartItems />
+  // return <MultipleSelection />
+  return <FilteringAList />
   /*   const [name, setName] = useLocalStorage('name', '')
   useUpdateLogger(name)
   return (
