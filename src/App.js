@@ -8,6 +8,7 @@ import Counter from './components/Counter'
 import UpdateShoppingCartItems from './components/UpdateShoppingCartItems'
 import MultipleSelection from './components/MultipleSelection'
 import FilteringAList from './components/FilteringAList'
+import ResetADetailForm from './components/ResetADetailForm'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
@@ -16,7 +17,8 @@ function App () {
   // return <Counter />
   // return <UpdateShoppingCartItems />
   // return <MultipleSelection />
-  return <FilteringAList />
+  // return <FilteringAList />
+  return <ResetADetailForm />
   /*   const [name, setName] = useLocalStorage('name', '')
   useUpdateLogger(name)
   return (
