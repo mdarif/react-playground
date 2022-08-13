@@ -9,6 +9,8 @@ import UpdateShoppingCartItems from './components/UpdateShoppingCartItems'
 import MultipleSelection from './components/MultipleSelection'
 import FilteringAList from './components/FilteringAList'
 import ResetADetailForm from './components/ResetADetailForm'
+import TaskAppWithState from './components/TaskAppWithState'
+import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
@@ -18,7 +20,9 @@ function App () {
   // return <UpdateShoppingCartItems />
   // return <MultipleSelection />
   // return <FilteringAList />
-  return <ResetADetailForm />
+  // return <ResetADetailForm />
+  // return <TaskAppWithState />
+  return <TaskAppWithUseReducer />
   /*   const [name, setName] = useLocalStorage('name', '')
   useUpdateLogger(name)
   return (
