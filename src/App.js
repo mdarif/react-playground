@@ -16,13 +16,13 @@ import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
 function App () {
   // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   // return <NumberList numbers={numbers} />
-  // return <Counter />
+  return <Counter />
   // return <UpdateShoppingCartItems />
   // return <MultipleSelection />
   // return <FilteringAList />
   // return <ResetADetailForm />
   // return <TaskAppWithState />
-  return <TaskAppWithUseReducer />
+  // return <TaskAppWithUseReducer />
   /*   const [name, setName] = useLocalStorage('name', '')
   useUpdateLogger(name)
   return (

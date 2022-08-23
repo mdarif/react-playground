@@ -1,7 +1,7 @@
 /**
  * useReducer
  *
- * The useReducer Hook is similar to useState—you must pass it an initial state
+ * The useReducer Hook is similar to useState, you must pass it an initial state
  * and it returns a stateful value and a way to set state (in this case, the
  * dispatch function).
  */
