@@ -25,7 +25,7 @@ const initialProducts = [
 export default function UpdateShoppingCartItems () {
   const [products, setProducts] = useState(initialProducts)
 
-  function handleIncreaseClick (productId) {
+  function handleIncrease (productId) {
     const newProducts = products.map(product => {
       if (product.id === productId) {
         return {
@@ -39,23 +39,50 @@ export default function UpdateShoppingCartItems () {
     setProducts(newProducts)
   }
 
+  function handleDecrease (productId) {
+    const newProducts = products.map(product => {
+      if (product.id === productId) {
+        return {
+          ...product,
+          count: product.count - 1
+        }
+      } else {
+        return product
+      }
+    })
+    setProducts(newProducts)
+  }
+
+  const listItems = products.map(product => (
+    <li
+      key={product.id}
+      style={{
+        color: product.count === 0 ? 'red' : 'green'
+      }}
+    >
+      {product.name} (<b>{product.count}</b>)
+      <button
+        onClick={() => {
+          handleIncrease(product.id)
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          handleDecrease(product.id)
+        }}
+        disabled={product.count === 0}
+      >
+        -
+      </button>
+    </li>
+  ))
+
   return (
     <>
       {JSON.stringify(products)}
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            {product.name} (<b>{product.count}</b>)
-            <button
-              onClick={() => {
-                handleIncreaseClick(product.id)
-              }}
-            >
-              +
-            </button>
-          </li>
-        ))}
-      </ul>
+      <ul>{listItems}</ul>
     </>
   )
 }

@@ -28,7 +28,7 @@ function Counter () {
   return (
     <>
       <button onClick={decrementCount}>-</button>
-      <h1>{`${count} ${theme}`}</h1>
+      <h1>{count + ' ' + theme}</h1>
       <button onClick={incrementCount}>+</button>
     </>
   )
