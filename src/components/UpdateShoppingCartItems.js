@@ -81,7 +81,7 @@ export default function UpdateShoppingCartItems () {
 
   return (
     <>
-      {JSON.stringify(products)}
+      <h1>{JSON.stringify(products)}</h1>
       <ul>{listItems}</ul>
     </>
   )

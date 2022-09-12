@@ -2,18 +2,30 @@ import { useState } from 'react'
 
 const initialState = {
   count: 0,
-  theme: 'red'
+  theme: 'red',
+  name: {
+    fname: 'Mohammad',
+    lname: 'Arif'
+  }
 }
 
 function Counter () {
   const [state, setState] = useState(initialState)
-  const { count, theme } = state
+  const {
+    count,
+    theme,
+    name: { fname } // nested destructuring
+  } = state
 
   function decrementCount () {
     setState(prevState => ({
       ...prevState,
       count: prevState.count - 1,
-      theme: 'red'
+      theme: 'red',
+      name: {
+        ...prevState.name,
+        fname: 'Mohammad'
+      }
     }))
   }
 
@@ -21,14 +33,19 @@ function Counter () {
     setState(prevState => ({
       ...prevState,
       count: prevState.count + 1,
-      theme: 'green'
+      theme: 'green',
+      name: {
+        ...prevState.name,
+        fname: 'Hina'
+      }
     }))
   }
 
   return (
     <>
+      <p>{JSON.stringify(state)}</p>
       <button onClick={decrementCount}>-</button>
-      <h1>{count + ' ' + theme}</h1>
+      <h1>{count + ' ' + theme + ' ' + fname}</h1>
       <button onClick={incrementCount}>+</button>
     </>
   )
