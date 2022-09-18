@@ -11,6 +11,7 @@ import FilteringAList from './components/FilteringAList'
 import ResetADetailForm from './components/ResetADetailForm'
 import TaskAppWithState from './components/TaskAppWithState'
 import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
+import UseTransition from './components/UseTransition'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
@@ -19,7 +20,7 @@ function App () {
   // return <Counter />
   // return <UpdateShoppingCartItems />
   // return <MultipleSelection />
-  return <FilteringAList />
+  // return <FilteringAList />
   // return <ResetADetailForm />
   // return <TaskAppWithState />
   // return <TaskAppWithUseReducer />
@@ -28,6 +29,7 @@ function App () {
   return (
     <input type='text' value={name} onChange={e => setName(e.target.value)} />
   ) */
+  return <UseTransition />
 }
 
 export default App

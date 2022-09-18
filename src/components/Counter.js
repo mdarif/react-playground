@@ -31,12 +31,12 @@ function Counter () {
 
   function incrementCount () {
     setState(prevState => ({
-      ...prevState,
-      count: prevState.count + 1,
-      theme: 'green',
+      ...prevState, // copy the previous state
+      count: prevState.count + 1, // but update the count
+      theme: 'green', // update the theme name
       name: {
-        ...prevState.name,
-        fname: 'Hina'
+        ...prevState.name, // with the same one
+        fname: 'Hina' // update the fname
       }
     }))
   }
