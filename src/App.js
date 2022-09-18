@@ -12,6 +12,7 @@ import ResetADetailForm from './components/ResetADetailForm'
 import TaskAppWithState from './components/TaskAppWithState'
 import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
 import UseTransition from './components/UseTransition'
+import WDS from './components/UseTransitionWDS'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
@@ -29,7 +30,8 @@ function App () {
   return (
     <input type='text' value={name} onChange={e => setName(e.target.value)} />
   ) */
-  return <UseTransition />
+  // return <UseTransition />
+  return <WDS />
 }
 
 export default App
