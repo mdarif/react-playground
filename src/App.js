@@ -13,6 +13,7 @@ import TaskAppWithState from './components/TaskAppWithState'
 import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
 import UseTransition from './components/UseTransition'
 import WDS from './components/UseTransitionWDS'
+import ToDos from './components/ToDos'
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App () {
@@ -31,7 +32,8 @@ function App () {
     <input type='text' value={name} onChange={e => setName(e.target.value)} />
   ) */
   // return <UseTransition />
-  return <WDS />
+  // return <WDS />
+  return <ToDos />
 }
 
 export default App
