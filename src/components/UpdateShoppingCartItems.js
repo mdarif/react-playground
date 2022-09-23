@@ -53,6 +53,12 @@ export default function UpdateShoppingCartItems () {
     setProducts(newProducts)
   }
 
+  const deleteItem = id => {
+    setProducts(oldProducts => {
+      return oldProducts.filter(product => product.id !== id)
+    })
+  }
+
   const listItems = products.map(product => (
     <li
       key={product.id}
@@ -60,7 +66,7 @@ export default function UpdateShoppingCartItems () {
         color: product.count === 0 ? 'red' : 'green'
       }}
     >
-      {product.name} (<b>{product.count}</b>)
+      {product.name} (<b>{product.count}</b>) {''}
       <button
         onClick={() => {
           handleIncrease(product.id)
@@ -75,7 +81,8 @@ export default function UpdateShoppingCartItems () {
         disabled={product.count === 0}
       >
         -
-      </button>
+      </button>{' '}
+      <button onClick={() => deleteItem(product.id)}>Delete</button>
     </li>
   ))
 

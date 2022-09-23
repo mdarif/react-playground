@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-let globalId = 0
+let globalId = 0 // to increment the id
 
 function ToDos () {
   const [task, setTask] = useState('')
@@ -14,7 +14,7 @@ function ToDos () {
     })
   }
 
-  // Remove the selected tod do item
+  // Remove the selected todo item and update the state
   const deleteTodo = id => {
     setTodos(oldTodos => oldTodos.filter(item => item.id !== id))
   }
@@ -38,13 +38,16 @@ function ToDos () {
         />
         <button type='submit'>Add ToDo</button>
       </form>
-      {JSON.stringify(todos)}
-      {todos.map(item => (
-        <li key={item.id}>
-          {item.todo}{' '}
-          <button onClick={() => deleteTodo(item.id)}>Delete</button>
-        </li>
-      ))}
+      <div>
+        <ul>
+          {todos.map(item => (
+            <li key={item.id}>
+              {item.todo}{' '}
+              <button onClick={() => deleteTodo(item.id)}>Delete</button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
