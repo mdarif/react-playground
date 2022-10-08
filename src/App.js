@@ -1,22 +1,23 @@
-import React from 'react'
-import NumberList from './components/numberList'
-import Toggle from './components/handlingEvents'
-import useLocalStorage from './CustomHooks/useLocalStorage'
-import useUpdateLogger from './CustomHooks/useUpdateLogger'
-import UseReducer from './components/UseReducer'
-import Counter from './components/Counter'
-import UpdateShoppingCartItems from './components/UpdateShoppingCartItems'
-import MultipleSelection from './components/MultipleSelection'
-import FilteringAList from './components/FilteringAList'
-import ResetADetailForm from './components/ResetADetailForm'
-import TaskAppWithState from './components/TaskAppWithState'
-import TaskAppWithUseReducer from './components/TaskAppWithUseReducer'
-import UseTransition from './components/UseTransition'
-import WDS from './components/UseTransitionWDS'
-import ToDos from './components/ToDos'
+import React from "react";
+import NumberList from "./components/numberList";
+import Toggle from "./components/handlingEvents";
+import useLocalStorage from "./CustomHooks/useLocalStorage";
+import useUpdateLogger from "./CustomHooks/useUpdateLogger";
+import UseReducer from "./components/UseReducer";
+import Counter from "./components/Counter";
+import UpdateShoppingCartItems from "./components/UpdateShoppingCartItems";
+import MultipleSelection from "./components/MultipleSelection";
+import FilteringAList from "./components/FilteringAList";
+import ResetADetailForm from "./components/ResetADetailForm";
+import TaskAppWithState from "./components/TaskAppWithState";
+import TaskAppWithUseReducer from "./components/TaskAppWithUseReducer";
+import UseTransition from "./components/UseTransition";
+import WDS from "./components/UseTransitionWDS";
+import ToDos from "./components/ToDos";
+import AsyncAwait from "./components/AsyncAwait";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
-function App () {
+function App() {
   // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   // return <NumberList numbers={numbers} />
   // return <Counter />
@@ -33,7 +34,8 @@ function App () {
   ) */
   // return <UseTransition />
   // return <WDS />
-  return <ToDos />
+  // return <ToDos />
+  return <AsyncAwait />;
 }
 
-export default App
+export default App;
