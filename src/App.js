@@ -14,7 +14,8 @@ import TaskAppWithUseReducer from "./components/TaskAppWithUseReducer";
 import UseTransition from "./components/UseTransition";
 import WDS from "./components/UseTransitionWDS";
 import ToDos from "./components/ToDos";
-import AsyncAwait from "./components/AsyncAwait";
+import HackerNewsAsync from "./components/AsyncAwait";
+import HackerNewsPromise from "./components/Promise";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
   // return <UseTransition />
   // return <WDS />
   // return <ToDos />
-  return <AsyncAwait />;
+  // return <HackerNewsAsync />;
+  return <HackerNewsPromise />;
 }
 
 export default App;
