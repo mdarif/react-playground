@@ -29,7 +29,6 @@ function HackerNewsPromise() {
         setError(false);
       })
       .catch((error) => {
-        console.log("error", error);
         setLoading(false);
         setError(error);
         setSearch("");

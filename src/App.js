@@ -16,17 +16,19 @@ import WDS from "./components/UseTransitionWDS";
 import ToDos from "./components/ToDos";
 import HackerNewsAsync from "./components/AsyncAwait";
 import HackerNewsPromise from "./components/Promise";
+import FruitsCombobox from "./Accessibility/basic";
+import FruitsComboboxSuspense from "./Accessibility/basic-suspense";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
   // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   // return <NumberList numbers={numbers} />
-  // return <Counter />
+  // return <Counter />;
   // return <UpdateShoppingCartItems />
   // return <MultipleSelection />
   // return <FilteringAList />
   // return <ResetADetailForm />
-  // return <TaskAppWithState />
+  // return <TaskAppWithState />;
   // return <TaskAppWithUseReducer />
   /*   const [name, setName] = useLocalStorage('name', '')
   useUpdateLogger(name)
@@ -37,7 +39,9 @@ function App() {
   // return <WDS />
   // return <ToDos />
   // return <HackerNewsAsync />;
-  return <HackerNewsPromise />;
+  // return <HackerNewsPromise />;
+  // return <FruitsCombobox />;
+  return <FruitsComboboxSuspense />;
 }
 
 export default App;
