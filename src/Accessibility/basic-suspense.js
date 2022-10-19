@@ -6,15 +6,28 @@ import {
   useComboboxState,
 } from "ariakit/combobox";
 import "./style.css";
-import axios from "axios";
 
-function Fruits({ query = "" }) {
-  const fruits = axios(
-    `https://634fc551df22c2af7b597ded.mockapi.io/api/react/playground/fruits?search=${query}`
-  ).then((res) => console.log(res.data));
+async function getFruitsData() {
+  try {
+    const resp = await fetch(
+      `https://634fc551df22c2af7b597ded.mockapi.io/api/react/playground/fruits`
+    );
+    return resp.json();
+  } catch (error) {
+    console.log("error", error);
+  }
+}
 
-  console.log("fruits", fruits);
-  // return fruits.map((fruit) => {
+function Fruits() {
+  getFruitsData().then((fruits) => {
+    return fruits.map((fruit) => (
+      <ComboboxItem key={fruit.id} value={fruit.name}>
+        {fruit.name}
+      </ComboboxItem>
+    ));
+  });
+
+  // return data.map((fruit) => {
   //   return (
   //     <ComboboxItem className="combobox-item" key={fruit} value={fruit}>
   //       {fruit}
@@ -38,9 +51,10 @@ function FruitsComboboxSuspense() {
         </label>
         {
           <ComboboxPopover state={combobox} className="combobox-list">
-            <React.Suspense fallback={<div>Loading...</div>}>
+            <Fruits />
+            {/* <React.Suspense fallback={<div>Loading...</div>}>
               <Fruits query={combobox.value} />
-            </React.Suspense>
+            </React.Suspense> */}
           </ComboboxPopover>
         }
       </div>
