@@ -21,6 +21,7 @@ import FruitsComboboxSuspense from "./Accessibility/basic-suspense";
 import UseFetchData from "./components/useFetch";
 import FetchApi from "./components/FetchAPI";
 import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
+import FetchWithCustomHook from "./components/FetchAPI/fetchWithCustomHook";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -47,7 +48,8 @@ function App() {
   // return <FruitsComboboxSuspense />;
   // return <UseFetchData />;
   // return <FetchApi />;
-  return <FetchApiWithAwait />;
+  // return <FetchApiWithAwait />;
+  return <FetchWithCustomHook />;
 }
 
 export default App;
