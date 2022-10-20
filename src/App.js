@@ -18,6 +18,9 @@ import HackerNewsAsync from "./components/AsyncAwait";
 import HackerNewsPromise from "./components/Promise";
 import FruitsCombobox from "./Accessibility/basic";
 import FruitsComboboxSuspense from "./Accessibility/basic-suspense";
+import UseFetchData from "./components/useFetch";
+import FetchApi from "./components/FetchAPI";
+import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -37,11 +40,14 @@ function App() {
   ) */
   // return <UseTransition />
   // return <WDS />
-  // return <ToDos />
+  // return <ToDos />;
   // return <HackerNewsAsync />;
   // return <HackerNewsPromise />;
   // return <FruitsCombobox />;
-  return <FruitsComboboxSuspense />;
+  // return <FruitsComboboxSuspense />;
+  // return <UseFetchData />;
+  // return <FetchApi />;
+  return <FetchApiWithAwait />;
 }
 
 export default App;

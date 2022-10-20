@@ -1,4 +1,5 @@
 import React from "react";
+import useFetch from "react-fetch-hook";
 import {
   Combobox,
   ComboboxItem,
@@ -7,25 +8,31 @@ import {
 } from "ariakit/combobox";
 import "./style.css";
 
-async function getFruitsData() {
-  try {
-    const resp = await fetch(
-      `https://634fc551df22c2af7b597ded.mockapi.io/api/react/playground/fruits`
-    );
-    return resp.json();
-  } catch (error) {
-    console.log("error", error);
-  }
-}
+// async function getFruitsData() {
+//   try {
+//     const resp = await fetch(
+//       `https://634fc551df22c2af7b597ded.mockapi.io/api/react/playground/fruits`
+//     );
+//     return resp.json();
+//   } catch (error) {
+//     console.log("error", error);
+//   }
+// }
 
 function Fruits() {
-  getFruitsData().then((fruits) => {
-    return fruits.map((fruit) => (
-      <ComboboxItem key={fruit.id} value={fruit.name}>
-        {fruit.name}
-      </ComboboxItem>
-    ));
-  });
+  // getFruitsData().then((fruits) => {
+  //   return fruits.map((fruit) => (
+  //     <ComboboxItem key={fruit.id} value={fruit.name}>
+  //       {fruit.name}
+  //     </ComboboxItem>
+  //   ));
+  // });
+
+  const { isLoading, data } = useFetch(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+
+  console.log("data", data);
 
   // return data.map((fruit) => {
   //   return (
