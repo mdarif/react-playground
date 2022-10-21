@@ -33,6 +33,9 @@ function HackerNewsPromise() {
         setError(error);
         setSearch("");
         setData([]);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -56,13 +59,24 @@ function HackerNewsPromise() {
     <>
       <h2 style={{ color: "red" }}>{error && error.message}</h2>
       <form onSubmit={submitForm}>
-        <input
-          type="text"
-          placeholder="Type the query and press enter"
-          value={search}
-          onChange={handleQuery}
-        />
-        <input type="button" value="Clear Results!!!" onClick={clearResults} />
+        <section>
+          <label htmlFor="enter">Type any term and press Enter</label>{" "}
+          <input
+            id="enter"
+            type="text"
+            placeholder="Press Enter Key"
+            value={search}
+            onChange={handleQuery}
+          />
+        </section>
+        <section>
+          <input
+            type="button"
+            id="clear"
+            value="Clear Results"
+            onClick={clearResults}
+          />
+        </section>
       </form>
 
       <h1>{loading && "Loading..."}</h1>
@@ -70,7 +84,7 @@ function HackerNewsPromise() {
        * The logical AND (&&) operator (logical conjunction) for a set of boolean operands will be true
        * if and only if all the operands are true. Otherwise it will be false.
        */}
-      <h2>{data.length === 0 && "No result found"}</h2>
+      {/* <h2>{data.length === 0 && "No result found"}</h2> */}
       <ul>
         {data &&
           data

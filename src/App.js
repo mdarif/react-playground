@@ -41,7 +41,7 @@ function App() {
   return (
     <input type='text' value={name} onChange={e => setName(e.target.value)} />
   ) */
-  // return <UseTransition />
+  return <UseTransition />;
   // return <WDS />
   // return <ToDos />;
   // return <HackerNewsAsync />;
@@ -53,7 +53,7 @@ function App() {
   // return <FetchApiWithAwait />;
   // return <FetchWithCustomHook />;
   // return <SampleContext />;
-  return <PortalExample />;
+  // return <PortalExample />;
 }
 
 export default App;
