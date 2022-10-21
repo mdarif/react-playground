@@ -1,6 +1,8 @@
 import React, { createContext, useState } from "react";
 import Page from "./page";
 
+// Context lets components pass information deep down without explicitly passing props.
+
 /**
  * createContext
  *

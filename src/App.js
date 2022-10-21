@@ -23,6 +23,7 @@ import FetchApi from "./components/FetchAPI";
 import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
 import FetchWithCustomHook from "./components/FetchAPI/fetchWithCustomHook";
 import SampleContext from "./components/CreateContext";
+import PortalExample from "./components/Portals";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -51,7 +52,8 @@ function App() {
   // return <FetchApi />;
   // return <FetchApiWithAwait />;
   // return <FetchWithCustomHook />;
-  return <SampleContext />;
+  // return <SampleContext />;
+  return <PortalExample />;
 }
 
 export default App;
