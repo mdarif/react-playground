@@ -24,6 +24,7 @@ import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
 import FetchWithCustomHook from "./components/FetchAPI/fetchWithCustomHook";
 import SampleContext from "./components/CreateContext";
 import PortalExample from "./components/Portals";
+import Router from "./components/Router";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
   return (
     <input type='text' value={name} onChange={e => setName(e.target.value)} />
   ) */
-  return <UseTransition />;
+  // return <UseTransition />;
   // return <WDS />
   // return <ToDos />;
   // return <HackerNewsAsync />;
@@ -54,6 +55,7 @@ function App() {
   // return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
+  return <Router />;
 }
 
 export default App;
