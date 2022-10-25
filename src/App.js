@@ -1,5 +1,10 @@
 import React from "react";
+import ChannelBar from "./components/ChannelBar";
+import ContentContainer from "./components/ContentContainer";
 import Router from "./components/Router";
+import TopNavigation from "./components/TopNavigation";
+import "./index.css";
+import SideBar from "./SideBar";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -30,7 +35,12 @@ function App() {
   // return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
-  return <Router />;
+  return (
+    <div className="flex">
+      <SideBar />
+      <ContentContainer />
+    </div>
+  );
 }
 
 export default App;

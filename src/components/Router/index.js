@@ -31,50 +31,55 @@ import PortalExample from "../Portals";
 
 export default function Router() {
   return (
-    <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/async">Async Await Example</Link>
-          </li>
-          <li>
-            <Link to="/context">Create Context</Link>
-          </li>
-          <li>
-            <Link to="/fetchapi">Fetch API</Link>
-          </li>
-          <li>
-            <Link to="/fetchapiawait">Fetch API with Await</Link>
-          </li>
-          <li>
-            <Link to="/fetchwithcustomhook">Fetch API with Custom Hook</Link>
-          </li>
-          <li>
-            <Link to="/listfilter">Filtering List</Link>
-          </li>
-          <li>
-            <Link to="/multiselect">Multiple Selection</Link>
-          </li>
-          <li>
-            <Link to="/simplepromise">Simple Promise</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Toggle />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/async" element={<HackerNewsAsync />} />
-        <Route path="/context" element={<SampleContext />} />
-        <Route path="/fetchapi" element={<FetchApi />} />
-        <Route path="/fetchapiawait" element={<FetchApiWithAwait />} />
-        <Route path="/fetchwithcustomhook" element={<FetchWithCustomHook />} />
-        <Route path="/portals" element={<PortalExample />} />
-        <Route path="/listfilter" element={<FilteringAList />} />
-        <Route path="/simplepromise" element={<HackerNewsPromise />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/async">Async Await Example</Link>
+            </li>
+            <li>
+              <Link to="/context">Create Context</Link>
+            </li>
+            <li>
+              <Link to="/fetchapi">Fetch API</Link>
+            </li>
+            <li>
+              <Link to="/fetchapiawait">Fetch API with Await</Link>
+            </li>
+            <li>
+              <Link to="/fetchwithcustomhook">Fetch API with Custom Hook</Link>
+            </li>
+            <li>
+              <Link to="/listfilter">Filtering List</Link>
+            </li>
+            <li>
+              <Link to="/multiselect">Multiple Selection</Link>
+            </li>
+            <li>
+              <Link to="/simplepromise">Simple Promise</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Toggle />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/async" element={<HackerNewsAsync />} />
+          <Route path="/context" element={<SampleContext />} />
+          <Route path="/fetchapi" element={<FetchApi />} />
+          <Route path="/fetchapiawait" element={<FetchApiWithAwait />} />
+          <Route
+            path="/fetchwithcustomhook"
+            element={<FetchWithCustomHook />}
+          />
+          <Route path="/portals" element={<PortalExample />} />
+          <Route path="/listfilter" element={<FilteringAList />} />
+          <Route path="/simplepromise" element={<HackerNewsPromise />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
