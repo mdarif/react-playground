@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import ProxyFetch from "./components/FetchAPI/proxyFetch";
 import Router from "./components/Router";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
@@ -30,7 +32,8 @@ function App() {
   // return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
-  return <Router />;
+  // return <Router />;
+  return <ProxyFetch />;
 }
 
 export default App;
