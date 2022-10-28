@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProxyFetch() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   async function loadData() {
     try {
       const response = await fetch("/v1/products/", {
@@ -17,7 +20,8 @@ export default function ProxyFetch() {
         },
       });
       const data = await response.json();
-      console.log("data", data);
+      setData(data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +29,17 @@ export default function ProxyFetch() {
 
   useEffect(() => {
     loadData();
-  });
+  }, []);
 
-  return null;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  const mappedData = data.map((item) => <li key={item.id}>{item.name}</li>);
+
+  return (
+    <>
+      <ul>{!loading && mappedData}</ul>
+    </>
+  );
 }
