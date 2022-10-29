@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import ProxyFetch from "./components/FetchAPI/proxyFetch";
 import Router from "./components/Router";
+import UseTransition from "./components/UseTransition";
+import UseTransitionCore from "./components/UseTransition/coreReactExample";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
 
 function App() {
@@ -33,7 +35,8 @@ function App() {
   // return <SampleContext />;
   // return <PortalExample />;
   // return <Router />;
-  return <ProxyFetch />;
+  // return <ProxyFetch />;
+  return <UseTransitionCore />;
 }
 
 export default App;
