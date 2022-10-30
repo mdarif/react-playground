@@ -2,6 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import ProxyFetch from "./components/FetchAPI/proxyFetch";
 import Router from "./components/Router";
+import UpdatingObjectsSimple from "./components/UpdatingObjects";
+import SingleHandler from "./components/UpdatingObjects/singleHandler";
+import UpdatingNestedObject from "./components/UpdatingObjects/updatingNestedObject";
+import UseReducer from "./components/UseReducer";
 import UseTransition from "./components/UseTransition";
 import UseTransitionCore from "./components/UseTransition/coreReactExample";
 // import RemoveShoppingCartItems from './components/RemoveShoppingCartItems'
@@ -36,7 +40,11 @@ function App() {
   // return <PortalExample />;
   // return <Router />;
   // return <ProxyFetch />;
-  return <UseTransitionCore />;
+  // return <UseTransitionCore />;
+  // return <UseReducer />;
+  // return <UpdatingObjectsSimple />;
+  // return <SingleHandler />;
+  return <UpdatingNestedObject />;
 }
 
 export default App;
