@@ -2,6 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import ProxyFetch from "./components/FetchAPI/proxyFetch";
 import Router from "./components/Router";
+import AddArray from "./components/UpdatingArrays/addToAnArray";
+import RemoveFromAnArray from "./components/UpdatingArrays/removeFromAnArray";
+import ReverseAnArray from "./components/UpdatingArrays/reverseAnArray";
 import UpdatingObjectsSimple from "./components/UpdatingObjects";
 import SingleHandler from "./components/UpdatingObjects/singleHandler";
 import UpdatingNestedObject from "./components/UpdatingObjects/updatingNestedObject";
@@ -44,7 +47,10 @@ function App() {
   // return <UseReducer />;
   // return <UpdatingObjectsSimple />;
   // return <SingleHandler />;
-  return <UpdatingNestedObject />;
+  // return <UpdatingNestedObject />;
+  // return <AddArray />;
+  // return <RemoveFromAnArray />;
+  return <ReverseAnArray />;
 }
 
 export default App;
