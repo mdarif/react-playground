@@ -74,6 +74,7 @@ export default function Router() {
         <Route path="/portals" element={<PortalExample />} />
         <Route path="/listfilter" element={<FilteringAList />} />
         <Route path="/simplepromise" element={<HackerNewsPromise />} />
+        <Route path="/multiselect" element={<MultipleSelection />} />
       </Routes>
     </BrowserRouter>
   );

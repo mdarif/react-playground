@@ -42,7 +42,7 @@ function App() {
   // return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
-  // return <Router />;
+  return <Router />;
   // return <ProxyFetch />;
   // return <UseTransitionCore />;
   // return <UseReducer />;
@@ -52,7 +52,7 @@ function App() {
   // return <AddArray />;
   // return <RemoveFromAnArray />;
   // return <ReverseAnArray />;
-  return <UpdateShoppingCartItem />;
+  // return <UpdateShoppingCartItem />;
 }
 
 export default App;
