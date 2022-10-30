@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../../CustomHooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 // import useFetch from "react-fetch-hook";
 
 export default function FetchWithCustomHook() {
