@@ -5,6 +5,7 @@ import Router from "./components/Router";
 import AddArray from "./components/UpdatingArrays/addToAnArray";
 import RemoveFromAnArray from "./components/UpdatingArrays/removeFromAnArray";
 import ReverseAnArray from "./components/UpdatingArrays/reverseAnArray";
+import UpdateShoppingCartItem from "./components/UpdatingArrays/updateShoppingCartItem";
 import UpdatingObjectsSimple from "./components/UpdatingObjects";
 import SingleHandler from "./components/UpdatingObjects/singleHandler";
 import UpdatingNestedObject from "./components/UpdatingObjects/updatingNestedObject";
@@ -50,7 +51,8 @@ function App() {
   // return <UpdatingNestedObject />;
   // return <AddArray />;
   // return <RemoveFromAnArray />;
-  return <ReverseAnArray />;
+  // return <ReverseAnArray />;
+  return <UpdateShoppingCartItem />;
 }
 
 export default App;
