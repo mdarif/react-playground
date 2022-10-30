@@ -6,7 +6,7 @@
 
 This **React Playground** project is a collection of React components and hooks to help you build your next project. It is a work in progress and will be updated regularly.
 
-# Why? 🤦‍♂️
+# Why? 🤔
 
 I have been working on a few React projects recently and I have found myself reusing the same components and hooks over and over again. I decided to create this project to help me and others build their next project faster.
 
@@ -31,19 +31,19 @@ I have been working on a few React projects recently and I have found myself reu
 ### Run Locally ☘️
 ...
 
-### Feedback ⛽️
+### Feedback 📝
 ...
 
-### Useful React Resources 🍗
+### Useful React Resources 📚
 - [React Beta Docs](https://beta.reactjs.org/)
 - 
 
-**How to Contribute**
+**How to Contribute** 🤝
 ---
 
 1. Clone repo and create a new branch: `$ git checkout git@github.com:mdarif/react-playground.git -b name_for_new_branch`.
 2. Make changes and test
 3. Submit Pull Request with comprehensive description of changes
 
-### Author 🐢
+### Author 👨‍💻
 Mohammad Arif
