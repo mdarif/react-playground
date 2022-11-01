@@ -32,8 +32,6 @@ function Fruits() {
     "https://jsonplaceholder.typicode.com/posts"
   );
 
-  console.log("data", data);
-
   // return data.map((fruit) => {
   //   return (
   //     <ComboboxItem className="combobox-item" key={fruit} value={fruit}>

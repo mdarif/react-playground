@@ -7,7 +7,7 @@ export default function FetchWithCustomHook() {
     `https://jsonplaceholder.typicode.com/posts?_limit=10`
   );
 
-  if (loading) return <div>Loading...</div>;
+  // if (loading) return <div>Loading...</div>;
 
   return (
     <div className="App">

@@ -1,5 +1,4 @@
 import React, { useState, useTransition, Suspense } from "react";
-import ReactDOM from "react-dom";
 
 // import "./styles.css";
 import { fetchProfileData } from "./fakeApi";

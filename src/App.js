@@ -1,5 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
+import FetchApi from "./components/FetchAPI";
+import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
+import FetchWithCustomHook from "./components/FetchAPI/fetchWithCustomHook";
 import ProxyFetch from "./components/FetchAPI/proxyFetch";
 import Router from "./components/Router";
 import AddArray from "./components/UpdatingArrays/addToAnArray";
@@ -39,10 +42,10 @@ function App() {
   // return <UseFetchData />;
   // return <FetchApi />;
   // return <FetchApiWithAwait />;
-  // return <FetchWithCustomHook />;
+  return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
-  return <Router />;
+  // return <Router />;
   // return <ProxyFetch />;
   // return <UseTransitionCore />;
   // return <UseReducer />;

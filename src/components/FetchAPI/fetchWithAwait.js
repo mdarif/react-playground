@@ -32,14 +32,27 @@ export default function FetchApiWithAwait() {
    * isolate them from the rendering logic using the useEffect Hook.
    */
   useEffect(() => {
+    /**
+     * In development, you will see two 'fetches' in the Network tab.
+     * There is nothing wrong with that. With the approach above,
+     * the first Effect will immediately get cleaned up so its
+     * copy of the ignore variable will be set to true. So even
+     * though there is an extra request, it won’t affect the
+     * state thanks to the if (!ignore) check.
+     */
+    let ignore = false;
+
     async function getData() {
       try {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/posts?_limit=10`
         );
         let actualData = await response.json();
-        setData(actualData);
-        setError(null);
+        // Call the setData once ignore is true only
+        if (!ignore) {
+          setData(actualData);
+          setError(null);
+        }
       } catch (error) {
         setError(error.message);
         setData(null);
@@ -48,7 +61,21 @@ export default function FetchApiWithAwait() {
       }
     }
 
+    /**
+     * In production, there will only be one request. If the second request in
+     * development is bothering you, the best approach is to use a solution
+     * that deduplicates requests and caches their responses between components.
+     */
     getData();
+
+    /**
+     * If your Effect fetches something, the cleanup function should either
+     * 'abort the fetch' or 'ignore' its result:
+     */
+
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   return (
