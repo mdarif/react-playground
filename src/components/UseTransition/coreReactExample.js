@@ -10,7 +10,6 @@ function getNextId(id) {
 const initialResource = fetchProfileData(0);
 
 export default function UseTransitionCore() {
-  console.log("initialResource", initialResource);
   const [resource, setResource] = useState(initialResource);
   const [isPending, startTransition] = useTransition();
   return (

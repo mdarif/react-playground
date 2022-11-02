@@ -20,6 +20,7 @@
   "scripts": {
     "start": "PORT=5999 react-scripts start",
     "build": "react-scripts build",
+    "build:deptree": "depcruise src --include-only '^src' --config --output-type dot | dot -T svg > src/assets/svg/dependency-graph.svg",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^11.18.0"
   }
 }
