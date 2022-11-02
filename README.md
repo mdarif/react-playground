@@ -1,6 +1,6 @@
 # React Playground 🚀
 
-> A collection of React components and hooks to help you build your next project.
+> A collection of React components and hooks to help you build your next project [WIP].
 
 # Introduction 🏓
 
@@ -10,9 +10,10 @@ This **React Playground** project is a collection of React components and hooks 
 
 I have been working on a few React projects recently and I have found myself reusing the same components and hooks over and over again. I decided to create this project to help me and others build their next project faster.
 
-# Forbidden Dependency Tests
+# Forbidden Dependency Tests 🚫
 
 Forbidden Dependency Tests allow us to test the structure of the application from the perspective of the dependencies. This is useful for ensuring that the application is structured in a way that is easy to maintain and extend.
+
 ![Dependency Tress](./src/assets/svg/dependency-graph.svg)
 
 
@@ -32,6 +33,7 @@ Forbidden Dependency Tests allow us to test the structure of the application fro
 - [React Router](https://reactrouter.com/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Axios](https://axios-http.com/)
+- [Dependency Cruiser](https://github.com/sverweij/dependency-cruiser)
 
 ### Run Locally ☘️
 ...
