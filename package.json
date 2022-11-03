@@ -15,9 +15,11 @@
     "react-fetch-hook": "^1.9.5",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
+    "source-map-explorer": "^2.5.3",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "PORT=5999 react-scripts start",
     "build": "react-scripts build",
     "build:deptree": "depcruise src --include-only '^src' --config --output-type dot | dot -T svg > src/assets/svg/dependency-graph.svg",
