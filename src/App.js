@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import SampleContext from "./components/CreateContext";
 import FetchApi from "./components/FetchAPI";
 import FetchApiWithAwait from "./components/FetchAPI/fetchWithAwait";
 import FetchWithCustomHook from "./components/FetchAPI/fetchWithCustomHook";
@@ -12,6 +13,7 @@ import UpdateShoppingCartItem from "./components/UpdatingArrays/updateShoppingCa
 import UpdatingObjectsSimple from "./components/UpdatingObjects";
 import SingleHandler from "./components/UpdatingObjects/singleHandler";
 import UpdatingNestedObject from "./components/UpdatingObjects/updatingNestedObject";
+import UseMemoExample from "./components/UseMemo";
 import UseReducer from "./components/UseReducer";
 import UseTransition from "./components/UseTransition";
 import UseTransitionCore from "./components/UseTransition/coreReactExample";
@@ -42,7 +44,7 @@ function App() {
   // return <UseFetchData />;
   // return <FetchApi />;
   // return <FetchApiWithAwait />;
-  return <FetchWithCustomHook />;
+  // return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
   // return <Router />;
@@ -56,6 +58,7 @@ function App() {
   // return <RemoveFromAnArray />;
   // return <ReverseAnArray />;
   // return <UpdateShoppingCartItem />;
+  return <UseMemoExample />;
 }
 
 export default App;
