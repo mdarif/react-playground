@@ -48,7 +48,7 @@ function App() {
   // return <SampleContext />;
   // return <PortalExample />;
   // return <Router />;
-  // return <ProxyFetch />;
+  return <ProxyFetch />;
   // return <UseTransitionCore />;
   // return <UseReducer />;
   // return <UpdatingObjectsSimple />;
@@ -58,7 +58,7 @@ function App() {
   // return <RemoveFromAnArray />;
   // return <ReverseAnArray />;
   // return <UpdateShoppingCartItem />;
-  return <UseMemoExample />;
+  // return <UseMemoExample />;
 }
 
 export default App;
