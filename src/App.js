@@ -44,11 +44,11 @@ function App() {
   // return <UseFetchData />;
   // return <FetchApi />;
   // return <FetchApiWithAwait />;
-  // return <FetchWithCustomHook />;
+  return <FetchWithCustomHook />;
   // return <SampleContext />;
   // return <PortalExample />;
   // return <Router />;
-  return <ProxyFetch />;
+  // return <ProxyFetch />;
   // return <UseTransitionCore />;
   // return <UseReducer />;
   // return <UpdatingObjectsSimple />;
