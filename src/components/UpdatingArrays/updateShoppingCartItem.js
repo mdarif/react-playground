@@ -36,9 +36,24 @@ export default function UpdateShoppingCartItem() {
     );
   }
 
+  function handleDecreaseClick(productId) {
+    setProducts(
+      products.map((product) => {
+        if (product.id === productId) {
+          return {
+            ...product,
+            count: product.count - 1,
+          };
+        } else {
+          return product;
+        }
+      })
+    );
+  }
+
   return (
     <>
-      <h1>Update Shopping Cart Item</h1>
+      <h1>Update Shopping Cart Items</h1>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
@@ -49,6 +64,13 @@ export default function UpdateShoppingCartItem() {
               }}
             >
               +
+            </button>
+            <button
+              onClick={() => {
+                handleDecreaseClick(product.id);
+              }}
+            >
+              -
             </button>
           </li>
         ))}

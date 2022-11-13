@@ -28,6 +28,10 @@ import FetchApiWithAwait from "../FetchAPI/fetchWithAwait";
 import FetchWithCustomHook from "../FetchAPI/fetchWithCustomHook";
 import SampleContext from "../CreateContext";
 import PortalExample from "../Portals";
+import TodoList from "../UseState/createInitialTodos";
+import ClassStateExample from "../UseState/ClassComponent";
+import FunctionStateExample from "../UseState/FunctionComponent";
+import UpdateShoppingCartItem from "../UpdatingArrays/updateShoppingCartItem";
 
 export default function Router() {
   return (
@@ -36,6 +40,25 @@ export default function Router() {
         <ul>
           <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/usestate">Passing the initializer function</Link>
+          </li>
+          <li>
+            <Link to="/classstate">
+              State example from Class Based Components
+            </Link>
+          </li>
+          <li>
+            <Link to="/functionstate">
+              State example from Function Based Components
+            </Link>
+          </li>
+          <li>
+            <Link to="/updatecart">Update Shopping Cart</Link>
+          </li>
+          <li>
+            <Link to="/counter">Counter</Link>
           </li>
           <li>
             <Link to="/async">Async Await Example</Link>
@@ -65,6 +88,10 @@ export default function Router() {
       </nav>
       <Routes>
         <Route path="/" element={<Toggle />} />
+        <Route path="/usestate" element={<TodoList />} />
+        <Route path="/classstate" element={<ClassStateExample />} />
+        <Route path="/functionstate" element={<FunctionStateExample />} />
+        <Route path="/updatecart" element={<UpdateShoppingCartItem />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/async" element={<HackerNewsAsync />} />
         <Route path="/context" element={<SampleContext />} />
