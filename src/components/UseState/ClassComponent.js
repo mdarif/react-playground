@@ -3,6 +3,7 @@ import React from "react";
 class ClassStateExample extends React.Component {
   constructor() {
     super();
+    // In class components, the state is always an object
     this.state = {
       firstName: "",
       lastName: "",

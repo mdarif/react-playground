@@ -6,6 +6,7 @@ function FunctionStateExample() {
   /**
    * useState() is asynchronous and batched
    *
+   * In function components, the state doesn't have to be an object — although it can be if you want.
    * useState() does not automatically merges the object you provide into the current state
    */
   return (
