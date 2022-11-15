@@ -47,6 +47,7 @@ export default function FetchApiWithAwait() {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/posts?_limit=10`
         );
+        // parses JSON response into native JavaScript objects
         let actualData = await response.json();
         // Call the setData once ignore is true only
         if (!ignore) {

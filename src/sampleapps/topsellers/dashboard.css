@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 500px;
+  font-family: 'Georgia', sans-serif;
+  background-color: #fefefe;
+  color: #424C55;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #3AB795;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.errorContainer {  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.errorMessage {
+  padding: 5px;
+  color: #961d1d;
+}
+
+.retry {
+  margin: 0 10px;
+}
+
+.summary {
+  margin: 25px;
+}
+
+.table {
+  min-width: 500px;
+  margin: 0 auto;
+}
+
+td {
+  padding: 8px
+}
+
+.availability {
+  font-style: italic;
+}

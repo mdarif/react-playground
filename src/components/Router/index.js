@@ -33,6 +33,7 @@ import ClassStateExample from "../UseState/ClassComponent";
 import FunctionStateExample from "../UseState/FunctionComponent";
 import UpdateShoppingCartItem from "../UpdatingArrays/updateShoppingCartItem";
 import JokeSampleApp from "../../sampleapps/jokes";
+import TopSellers from "../../sampleapps/topsellers";
 
 export default function Router() {
   return (
@@ -86,7 +87,10 @@ export default function Router() {
             <Link to="/simplepromise">Simple Promise</Link>
           </li>
           <li>
-            <Link to="/sampleapp/joke">Joke Sample App</Link>
+            <Link to="/sampleapps/joke">Joke Sample App</Link>
+          </li>
+          <li>
+            <Link to="/sampleapps/topsellers">Top Sellers</Link>
           </li>
         </ul>
       </nav>
@@ -105,7 +109,8 @@ export default function Router() {
         <Route path="/portals" element={<PortalExample />} />
         <Route path="/listfilter" element={<FilteringAList />} />
         <Route path="/simplepromise" element={<HackerNewsPromise />} />
-        <Route path="/sampleapp/joke" element={<JokeSampleApp />} />
+        <Route path="/sampleapps/joke" element={<JokeSampleApp />} />
+        <Route path="/sampleapps/topsellers" element={<TopSellers />} />
         <Route path="/multiselect" element={<MultipleSelection />} />
       </Routes>
     </BrowserRouter>
