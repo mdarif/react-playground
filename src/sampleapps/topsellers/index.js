@@ -47,7 +47,12 @@ function TopSellers() {
     ));
   };
 
-  // Object grouping
+  /**
+   * Grouping orders by seller name (property)
+   * @param {*} objectArray
+   * @param {*} property
+   * @returns
+   */
   const groupBy = (objectArray, property) => {
     return objectArray.reduce((acc, obj) => {
       const key = obj[property];
