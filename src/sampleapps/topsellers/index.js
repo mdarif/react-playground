@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import styles from "./dashboard.css";
 import data from "./orders.json";
 
 // Requirements:
@@ -36,7 +35,7 @@ function TopSellers() {
     return orders.reduce((total, order) => total + order.revenue, 0);
   };
 
-  // Display a ranking showing the sellers ordered by their total revenue
+  // Display the seller ranking component for each seller
   const displaySellerRanking = (orders) => {
     return orders.map((order, index) => (
       <SellerRanking
@@ -59,8 +58,6 @@ function TopSellers() {
 
     // Do the grouping
     const groupBySeller = confirmedOrders.group(({ sellerName }) => sellerName);
-
-    console.log("groupBySeller", groupBySeller);
 
     /**
      * Object.keys()
