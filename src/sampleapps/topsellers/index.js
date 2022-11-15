@@ -47,6 +47,18 @@ function TopSellers() {
     ));
   };
 
+  // Object grouping
+  const groupBy = (objectArray, property) => {
+    return objectArray.reduce((acc, obj) => {
+      const key = obj[property];
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(obj);
+      return acc;
+    }, {});
+  };
+
   // Sort sellers by revenue at the end
   const sortSellerByRevenue = (orders) => {
     return orders.sort((a, b) => b.revenue - a.revenue);
@@ -57,7 +69,8 @@ function TopSellers() {
     const confirmedOrders = filterConfirmedOrders(data.orders);
 
     // Do the grouping
-    const groupBySeller = confirmedOrders.group(({ sellerName }) => sellerName);
+    // const groupBySeller = confirmedOrders.group(({ sellerName }) => sellerName);
+    const groupBySeller = groupBy(confirmedOrders, "sellerName");
 
     /**
      * Object.keys()
