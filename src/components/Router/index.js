@@ -36,6 +36,7 @@ import JokeSampleApp from "../../sampleapps/jokes";
 import TopSellers from "../../sampleapps/topsellers";
 import TodoApp from "../../sampleapps/todo";
 import TaskApp from "../TaskAppWithState";
+import App from "../../sampleapps/adduser";
 
 export default function Router() {
   return (
@@ -103,6 +104,9 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/todo">To Do App</Link>
           </li>
+          <li>
+            <Link to="/sampleapps/adduser">Add Users</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -125,6 +129,7 @@ export default function Router() {
         <Route path="/sampleapps/todo" element={<TodoApp />} />
         <Route path="/multiselect" element={<MultipleSelection />} />
         <Route path="/taskapp" element={<TaskApp />} />
+        <Route path="/sampleapps/adduser" element={<App />} />
         <Route
           path="/updateshoppingcart"
           element={<UpdateShoppingCartItem />}
