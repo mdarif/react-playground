@@ -10,6 +10,7 @@ export default function SingleHandler() {
   function handleChange(e) {
     setPerson({
       ...person,
+      // Computed property name
       [e.target.name]: e.target.value,
     });
   }

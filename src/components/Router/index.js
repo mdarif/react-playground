@@ -35,6 +35,7 @@ import UpdateShoppingCartItem from "../UpdatingArrays/updateShoppingCartItem";
 import JokeSampleApp from "../../sampleapps/jokes";
 import TopSellers from "../../sampleapps/topsellers";
 import TodoApp from "../../sampleapps/todo";
+import TaskApp from "../TaskAppWithState";
 
 export default function Router() {
   return (
@@ -85,6 +86,12 @@ export default function Router() {
             <Link to="/multiselect">Multiple Selection</Link>
           </li>
           <li>
+            <Link to="/taskapp">Task App With State</Link>
+          </li>
+          <li>
+            <Link to="/updateshoppingcart">Update Shopping Cart</Link>
+          </li>
+          <li>
             <Link to="/simplepromise">Simple Promise</Link>
           </li>
           <li>
@@ -117,6 +124,11 @@ export default function Router() {
         <Route path="/sampleapps/topsellers" element={<TopSellers />} />
         <Route path="/sampleapps/todo" element={<TodoApp />} />
         <Route path="/multiselect" element={<MultipleSelection />} />
+        <Route path="/taskapp" element={<TaskApp />} />
+        <Route
+          path="/updateshoppingcart"
+          element={<UpdateShoppingCartItem />}
+        />
       </Routes>
     </BrowserRouter>
   );

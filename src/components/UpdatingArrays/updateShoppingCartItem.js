@@ -21,34 +21,33 @@ const initialProducts = [
 export default function UpdateShoppingCartItem() {
   const [products, setProducts] = useState(initialProducts);
 
-  function handleIncreaseClick(productId) {
-    setProducts(
-      products.map((product) => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            count: product.count + 1,
-          };
-        } else {
-          return product;
-        }
-      })
-    );
+  function handleIncreaseClick(id) {
+    const updatedProducts = products.map((product) => {
+      if (product.id === id) {
+        return {
+          ...product,
+          count: product.count + 1,
+        };
+      } else {
+        return product;
+      }
+    });
+
+    setProducts(updatedProducts);
   }
 
-  function handleDecreaseClick(productId) {
-    setProducts(
-      products.map((product) => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            count: product.count - 1,
-          };
-        } else {
-          return product;
-        }
-      })
-    );
+  function handleDecreaseClick(id) {
+    const updatedProducts = products.map((product) => {
+      if (product.id === id) {
+        return {
+          ...product,
+          count: product.count - 1,
+        };
+      } else {
+        return product;
+      }
+    });
+    setProducts(updatedProducts);
   }
 
   return (
