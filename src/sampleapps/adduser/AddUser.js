@@ -13,6 +13,15 @@ const AddUser = (props) => {
   const addUser = (event) => {
     event.preventDefault();
 
+    /**
+     * Referencing Values with Refs
+     *
+     * When you want a component to “remember” some information, but you don’t
+     * want that information to trigger new renders, you can use a ref.
+     */
+
+    // Use ref instead of state as there is no need to re-render the UI
+    // refs are retained by React between re-renders
     let enteredName = nameRef.current.value;
     let enteredAge = ageRef.current.value;
 
@@ -33,6 +42,8 @@ const AddUser = (props) => {
     }
 
     props.onAddUser(enteredName, enteredAge);
+
+    // Clear the input fields after form submission
     nameRef.current.value = "";
     ageRef.current.value = "";
   };
