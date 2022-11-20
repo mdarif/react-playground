@@ -38,6 +38,7 @@ import TodoApp from "../../sampleapps/todo";
 import TaskApp from "../TaskAppWithState";
 import App from "../../sampleapps/adduser";
 import LoginApp from "../../sampleapps/login";
+import FormValidator from "../../sampleapps/formvalidator";
 
 export default function Router() {
   return (
@@ -111,6 +112,9 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/login">Login App</Link>
           </li>
+          <li>
+            <Link to="/sampleapps/formvalidator">Form Validator</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -139,6 +143,7 @@ export default function Router() {
           element={<UpdateShoppingCartItem />}
         />
         <Route path="/sampleapps/login" element={<LoginApp />} />
+        <Route path="/sampleapps/formvalidator" element={<FormValidator />} />
       </Routes>
     </BrowserRouter>
   );
