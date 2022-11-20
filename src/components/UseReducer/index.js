@@ -15,6 +15,8 @@ const ACTIONS = {
 /**
  * In Strict Mode, React will call your reducer and initializer
  * functions twice. This shouldn’t break your code.
+ *
+ * It doesn't happen in production mode.
  */
 
 /**

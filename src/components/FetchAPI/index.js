@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 /**
- * Considerations before fetching data
+ * Considerations before fetching data [IMP]
  *
  * When we request data, we must prepare a state to store the data
  * upon return. We can store it in a state management tool like
@@ -74,7 +74,7 @@ export default function FetchApi() {
 
   return (
     <div className="App">
-      <h1>Fetch API Example</h1>
+      <h1>Fetch API Example with Promises</h1>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       <ul>

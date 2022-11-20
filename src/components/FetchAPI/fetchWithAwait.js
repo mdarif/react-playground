@@ -81,7 +81,7 @@ export default function FetchApiWithAwait() {
 
   return (
     <div className="App">
-      <h1>Fetch API Example</h1>
+      <h1>Fetch API Example with async/await</h1>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       <ul>

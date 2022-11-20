@@ -11,7 +11,7 @@ export default function FetchWithCustomHook() {
 
   return (
     <div className="App">
-      <h1>Fetch API Example</h1>
+      <h1>Fetch API Example with custom hook</h1>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       <ul>
