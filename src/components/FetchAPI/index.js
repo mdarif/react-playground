@@ -49,8 +49,8 @@ export default function FetchApi() {
         }
         return response.json();
       })
-      .then((actualData) => {
-        setData(actualData);
+      .then((data) => {
+        setData(data);
         setError(null);
       })
       .catch((error) => {

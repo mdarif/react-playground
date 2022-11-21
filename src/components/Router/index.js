@@ -39,6 +39,8 @@ import TaskApp from "../TaskAppWithState";
 import App from "../../sampleapps/adduser";
 import LoginApp from "../../sampleapps/login";
 import FormValidator from "../../sampleapps/formvalidator";
+import PixelArt from "../../sampleapps/pixelart";
+import SimpleCalculator from "../../sampleapps/simplecalculator";
 
 export default function Router() {
   return (
@@ -115,6 +117,12 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/formvalidator">Form Validator</Link>
           </li>
+          <li>
+            <Link to="/sampleapps/pixelart">Pixel Art</Link>
+          </li>
+          <li>
+            <Link to="/sampleapps/simplecalculator">Simple Calculator</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -144,6 +152,11 @@ export default function Router() {
         />
         <Route path="/sampleapps/login" element={<LoginApp />} />
         <Route path="/sampleapps/formvalidator" element={<FormValidator />} />
+        <Route path="/sampleapps/pixelart" element={<PixelArt />} />
+        <Route
+          path="/sampleapps/simplecalculator"
+          element={<SimpleCalculator />}
+        />
       </Routes>
     </BrowserRouter>
   );
