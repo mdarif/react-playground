@@ -41,6 +41,7 @@ import LoginApp from "../../sampleapps/login";
 import FormValidator from "../../sampleapps/formvalidator";
 import PixelArt from "../../sampleapps/pixelart";
 import SimpleCalculator from "../../sampleapps/simplecalculator";
+import ShoppingCart from "../../sampleapps/shoppingcart";
 
 export default function Router() {
   return (
@@ -63,9 +64,9 @@ export default function Router() {
               State example from Function Based Components
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/updatecart">Update Shopping Cart</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/counter">Counter</Link>
           </li>
@@ -123,6 +124,9 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/simplecalculator">Simple Calculator</Link>
           </li>
+          <li>
+            <Link to="/sampleapps/shopcart">Advance Shopping Cart</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -157,6 +161,7 @@ export default function Router() {
           path="/sampleapps/simplecalculator"
           element={<SimpleCalculator />}
         />
+        <Route path="/sampleapps/shopcart" element={<ShoppingCart />} />
       </Routes>
     </BrowserRouter>
   );
