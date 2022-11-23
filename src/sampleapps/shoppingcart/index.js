@@ -19,13 +19,12 @@ const items = [
   },
 ];
 
-// const cart = [{ id: Date.now(), name: 'apple', quantity: 1, price: 0.39 }];
-
 function ShoppingCart() {
   const [itemsList, setItemsList] = useState(items);
   const [shoppingCart, setShoppingCart] = useState([]);
   const [total, setTotal] = useState(0);
 
+  // Add to cart the individual items
   const addToCart = (item) => {
     setShoppingCart((prevCart) => {
       return [
