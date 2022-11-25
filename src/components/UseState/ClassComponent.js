@@ -33,7 +33,7 @@ class ClassStateExample extends React.Component {
         <p>
           {this.state.firstName} {this.state.lastName}
         </p>
-        <p>{JSON.stringify(this.state)}</p>
+        <p>{JSON.stringify(this.state, null, 2)}</p>
       </div>
     );
   }

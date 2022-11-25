@@ -25,7 +25,7 @@ function FunctionStateExample() {
       <p>
         {name.firstName} {name.lastName}
       </p>
-      <p>{JSON.stringify(name)}</p>
+      <pre>{JSON.stringify(name, null, 2)}</pre>
     </div>
   );
 }

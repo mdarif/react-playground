@@ -44,7 +44,7 @@ function Counter() {
 
   return (
     <>
-      <p>{JSON.stringify(state)}</p>
+      <pre>{JSON.stringify(state, null, 2)}</pre>
       <button onClick={decrementCount}>-</button>
       <h1>{count + " " + theme + " " + fname}</h1>
       <button onClick={incrementCount}>+</button>

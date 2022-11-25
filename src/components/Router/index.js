@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import Counter from "../Counter";
+import Counter from "../Counter/Counter";
 import Toggle from "../handlingEvents";
 import HackerNewsAsync from "../AsyncAwait";
 // import HackerNewsAsync from "./components/AsyncAwait";
@@ -42,6 +42,8 @@ import FormValidator from "../../sampleapps/formvalidator";
 import PixelArt from "../../sampleapps/pixelart";
 import SimpleCalculator from "../../sampleapps/simplecalculator";
 import ShoppingCart from "../../sampleapps/shoppingcart";
+import FetchUserNextPrev from "../FetchAPI/FetchUsersNextPrev";
+import TicTacToe from "../Games/TicTacToe";
 
 export default function Router() {
   return (
@@ -86,6 +88,9 @@ export default function Router() {
             <Link to="/fetchwithcustomhook">Fetch API with Custom Hook</Link>
           </li>
           <li>
+            <Link to="/fetchusers">Fetch Users Next Previous</Link>
+          </li>
+          <li>
             <Link to="/listfilter">Filtering List</Link>
           </li>
           <li>
@@ -127,6 +132,9 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/shopcart">Advance Shopping Cart</Link>
           </li>
+          <li>
+            <Link to="/games/tictactoe">Tic Tac Toe Game</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -141,6 +149,7 @@ export default function Router() {
         <Route path="/fetchapi" element={<FetchApi />} />
         <Route path="/fetchapiawait" element={<FetchApiWithAwait />} />
         <Route path="/fetchwithcustomhook" element={<FetchWithCustomHook />} />
+        <Route path="/fetchusers" element={<FetchUserNextPrev />} />
         <Route path="/portals" element={<PortalExample />} />
         <Route path="/listfilter" element={<FilteringAList />} />
         <Route path="/simplepromise" element={<HackerNewsPromise />} />
@@ -162,6 +171,7 @@ export default function Router() {
           element={<SimpleCalculator />}
         />
         <Route path="/sampleapps/shopcart" element={<ShoppingCart />} />
+        <Route path="/games/tictactoe" element={<TicTacToe />} />
       </Routes>
     </BrowserRouter>
   );
