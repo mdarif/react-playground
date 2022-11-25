@@ -1,29 +1,24 @@
-td, .square {
+.board {
+  margin: 0 auto;
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: space-between;
+}
+
+.square {
   height: 150px;
   width: 150px;
   border: 1px solid #000;
   text-align: center;
   font-size: 60px;
   color: #000;
-}
-
-.board {
-  margin: 0 auto;
-  width: 200px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.square {
   cursor: pointer;
 }
 
 .square:hover {
   background-color: #eee;
-}
-
-table {
-  margin: 0 auto;
 }
 
 h1 {
