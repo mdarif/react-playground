@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import data from "./orders.json";
+import "./dashboard.css";
 
 // Requirements:
 // Once the <TopSellers /> component is mounted, load the order data [DONE]
@@ -113,12 +114,12 @@ function TopSellers() {
         </header>
         <main>
           <div>
-            <p>
+            <p className="center">
               <strong>Total revenue: </strong>
               <span id="totalRevenue">${totalRevenue}</span>
             </p>
           </div>
-          <h2>Seller Rankings</h2>
+          <h2 className="center">Seller Rankings</h2>
           <table>
             <thead>
               <tr>
@@ -132,7 +133,7 @@ function TopSellers() {
         </main>
         <div>
           <h1>Actual Object</h1>
-          <p>{JSON.stringify(data)}</p>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
       </div>
     </>

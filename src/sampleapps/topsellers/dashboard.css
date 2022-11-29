@@ -39,7 +39,7 @@ html {
   margin: 25px;
 }
 
-.table {
+table {
   min-width: 500px;
   margin: 0 auto;
 }
@@ -50,4 +50,8 @@ td {
 
 .availability {
   font-style: italic;
+}
+
+.center {
+  text-align: center;
 }
