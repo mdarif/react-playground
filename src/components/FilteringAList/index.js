@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { foods, filterItems } from './data.js'
+import { useState } from "react";
+import { foods, filterItems } from "./data.js";
 
 /**
  * Filtering a list
@@ -16,12 +16,12 @@ import { foods, filterItems } from './data.js'
  * write it yourself!
  */
 
-export default function FilterableList () {
-  const [query, setQuery] = useState('')
-  const result = filterItems(foods, query)
+export default function FilterableList() {
+  const [query, setQuery] = useState("");
+  const result = filterItems(foods, query);
 
-  function handleChange (e) {
-    setQuery(e.target.value)
+  function handleChange(e) {
+    setQuery(e.target.value);
   }
   return (
     <>
@@ -29,26 +29,26 @@ export default function FilterableList () {
       <hr />
       <List items={result} />
     </>
-  )
+  );
 }
 
-function SearchBar ({ query, onChange }) {
+function SearchBar({ query, onChange }) {
   return (
     <label>
       Search: <input value={query} onChange={onChange} />
     </label>
-  )
+  );
 }
 
-function List ({ items }) {
+function List({ items }) {
   return (
     <table>
-      {items.map(food => (
+      {items.map((food) => (
         <tr key={food.id}>
           <td>{food.name}</td>
           <td>{food.description}</td>
         </tr>
       ))}
     </table>
-  )
+  );
 }

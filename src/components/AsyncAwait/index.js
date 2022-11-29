@@ -38,7 +38,6 @@ function HackerNewsAsync() {
       setData(data);
       setError(false);
 
-      setLoading(false);
       setSearch("");
     } catch (error) {
       setError(error.message);

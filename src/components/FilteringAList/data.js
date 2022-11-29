@@ -1,39 +1,38 @@
-export function filterItems (items, query) {
-  query = query.toLowerCase()
-  return items.filter(item =>
-    item.name.split(' ').some(word => word.toLowerCase().startsWith(query))
-  )
+export function filterItems(items, query) {
+  return items.filter((f) => {
+    return f.description.toLowerCase().includes(query);
+  });
 }
 
 export const foods = [
   {
     id: 0,
-    name: 'Sushi',
+    name: "Sushi",
     description:
-      'Sushi is a traditional Japanese dish of prepared vinegared rice'
+      "Sushi is a traditional Japanese dish of prepared vinegared rice",
   },
   {
     id: 1,
-    name: 'Dal',
+    name: "Dal",
     description:
-      'The most common way of preparing dal is in the form of a soup to which onions, tomatoes and various spices may be added'
+      "The most common way of preparing dal is in the form of a soup to which onions, tomatoes and various spices may be added",
   },
   {
     id: 2,
-    name: 'Pierogi',
+    name: "Pierogi",
     description:
-      'Pierogi are filled dumplings made by wrapping unleavened dough around a savoury or sweet filling and cooking in boiling water'
+      "Pierogi are filled dumplings made by wrapping unleavened dough around a savoury or sweet filling and cooking in boiling water",
   },
   {
     id: 3,
-    name: 'Shish kebab',
+    name: "Shish kebab",
     description:
-      'Shish kebab is a popular meal of skewered and grilled cubes of meat.'
+      "Shish kebab is a popular meal of skewered and grilled cubes of meat.",
   },
   {
     id: 4,
-    name: 'Dim sum',
+    name: "Dim sum",
     description:
-      'Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch'
-  }
-]
+      "Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch",
+  },
+];
