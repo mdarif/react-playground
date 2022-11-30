@@ -12,7 +12,7 @@ const TicTacToe = () => {
 
   // Winning condition
   const checkWinner = (board) => {
-    const conditions = [
+    const lines = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -24,7 +24,7 @@ const TicTacToe = () => {
     ];
 
     let flag = false;
-    conditions.forEach((element) => {
+    lines.forEach((element) => {
       if (
         board[element[0]] !== "" &&
         board[element[1]] !== "" &&
@@ -44,12 +44,13 @@ const TicTacToe = () => {
   const handleClick = (no) => {
     let squares = [...board];
     squares[no] = move;
-    setBoard(squares);
 
     if (board[no] !== "") {
       alert("Already filled!");
       return;
     }
+
+    setBoard(squares);
 
     if (move === "X") {
       setMove("O");
@@ -98,25 +99,6 @@ const TicTacToe = () => {
           );
         })}
       </div>
-      {/* <table>
-        <tbody>
-          <tr>
-            <td onClick={() => handleClick(0)}>{board[0]}</td>
-            <td onClick={() => handleClick(1)}>{board[1]}</td>
-            <td onClick={() => handleClick(2)}>{board[2]}</td>
-          </tr>
-          <tr>
-            <td onClick={() => handleClick(3)}>{board[3]}</td>
-            <td onClick={() => handleClick(4)}>{board[4]}</td>
-            <td onClick={() => handleClick(5)}>{board[5]}</td>
-          </tr>
-          <tr>
-            <td onClick={() => handleClick(6)}>{board[6]}</td>
-            <td onClick={() => handleClick(7)}>{board[7]}</td>
-            <td onClick={() => handleClick(8)}>{board[8]}</td>
-          </tr>
-        </tbody>
-      </table> */}
     </>
   );
 };

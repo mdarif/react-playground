@@ -131,10 +131,10 @@ function TopSellers() {
             <tbody>{orders && displaySellerRanking(orders)}</tbody>
           </table>
         </main>
-        <div>
+        {/* <div>
           <h1>Actual Object</h1>
           <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
+        </div> */}
       </div>
     </>
   );
