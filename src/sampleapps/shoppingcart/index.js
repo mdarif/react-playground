@@ -52,7 +52,6 @@ function ShoppingCart() {
     });
 
     setShoppingCart(updatedItem);
-    console.log("updatedItem", updatedItem);
   };
 
   const decrementItem = (id) => {
@@ -61,7 +60,6 @@ function ShoppingCart() {
         return {
           ...cart,
           quantity: cart.quantity - 1,
-          // price: cart.price * cart.quantity,
         };
       } else {
         return cart;
@@ -69,15 +67,18 @@ function ShoppingCart() {
     });
 
     // remove the item which has 0 quantity
-    updatedItem = updatedItem.filter((item) => item.quantity > 0);
+    updatedItem = removeItem(updatedItem);
 
     setShoppingCart(updatedItem);
   };
 
+  const removeItem = (items) => {
+    return items.filter((item) => item.quantity > 0);
+  };
+
   const totalCartAmount = () => {
     const total = shoppingCart.reduce(
-      (prevValue, currValue) =>
-        prevValue + currValue.price * currValue.quantity,
+      (total, currValue) => total + currValue.price * currValue.quantity,
       0
     );
     setTotal(total);
@@ -89,6 +90,7 @@ function ShoppingCart() {
 
   return (
     <div>
+      {/* <pre>{JSON.stringify(shoppingCart, null, 2)}</pre> */}
       <h1>Shopping Cart</h1>
       <div className="cart">
         <div className="items">
@@ -103,7 +105,6 @@ function ShoppingCart() {
         </div>
         <div>
           <h2>Cart</h2>
-          {/* <h3>{JSON.stringify(shoppingCart)}</h3> */}
           {shoppingCart.length > 0 ? (
             shoppingCart.map((item) => (
               <div key={item.id}>
