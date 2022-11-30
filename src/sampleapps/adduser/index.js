@@ -7,7 +7,14 @@ const App = () => {
 
   const addUserHandler = (name, age) => {
     setUsersList((prevState) => {
-      return [...prevState, { name: name, age: age, id: Date.now() }];
+      return [
+        ...prevState,
+        {
+          id: Date.now(),
+          name: name,
+          age: age,
+        },
+      ];
     });
   };
 
