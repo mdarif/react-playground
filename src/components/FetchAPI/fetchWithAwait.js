@@ -47,11 +47,20 @@ export default function FetchApiWithAwait() {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/posts?_limit=10`
         );
+        /**
+         * An accurate check for a successful fetch() would include checking that the promise resolved,
+         * then checking that the Response.ok property has a value of true.
+         */
+        if (!response.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+          );
+        }
         // parses JSON response into native JavaScript objects
-        let actualData = await response.json();
+        let data = await response.json();
         // Call the setData once ignore is true only
         if (!ignore) {
-          setData(actualData);
+          setData(data);
           setError(null);
         }
       } catch (error) {

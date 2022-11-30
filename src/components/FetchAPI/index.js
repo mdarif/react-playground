@@ -47,6 +47,8 @@ export default function FetchApi() {
             `This is an HTTP error: The status is ${response.status}`
           );
         }
+
+        // If all good than return the response
         return response.json();
       })
       .then((data) => {

@@ -23,6 +23,15 @@ export default function FetchUserNextPrev() {
       const resp = await fetch(
         `https://jsonplaceholder.typicode.com/users/${userId}`
       );
+      /**
+       * An accurate check for a successful fetch() would include checking that the promise resolved,
+       * then checking that the Response.ok property has a value of true.
+       */
+      if (!response.ok) {
+        throw new Error(
+          `This is an HTTP error: The status is ${response.status}`
+        );
+      }
       const data = await resp.json();
       setData(data);
     } catch (err) {
