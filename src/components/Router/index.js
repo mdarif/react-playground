@@ -44,6 +44,7 @@ import SimpleCalculator from "../../sampleapps/simplecalculator";
 import ShoppingCart from "../../sampleapps/shoppingcart";
 import FetchUserNextPrev from "../FetchAPI/FetchUsersNextPrev";
 import TicTacToe from "../Games/TicTacToe";
+import StopWatch from "../../sampleapps/stopwatch";
 
 export default function Router() {
   return (
@@ -135,6 +136,9 @@ export default function Router() {
           <li>
             <Link to="/games/tictactoe">Tic Tac Toe Game</Link>
           </li>
+          <li>
+            <Link to="/sampleapps/stopwatch">Stop Watch</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -172,6 +176,7 @@ export default function Router() {
         />
         <Route path="/sampleapps/shopcart" element={<ShoppingCart />} />
         <Route path="/games/tictactoe" element={<TicTacToe />} />
+        <Route path="/sampleapps/stopwatch" element={<StopWatch />} />
       </Routes>
     </BrowserRouter>
   );
