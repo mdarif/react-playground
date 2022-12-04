@@ -45,6 +45,7 @@ import ShoppingCart from "../../sampleapps/shoppingcart";
 import FetchUserNextPrev from "../FetchAPI/FetchUsersNextPrev";
 import TicTacToe from "../Games/TicTacToe";
 import StopWatch from "../../sampleapps/stopwatch";
+import MaxCount from "../Challenges/maxcount";
 
 export default function Router() {
   return (
@@ -139,6 +140,9 @@ export default function Router() {
           <li>
             <Link to="/sampleapps/stopwatch">Stop Watch</Link>
           </li>
+          <li>
+            <Link to="/challenges/maxcount">Max Count</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -177,6 +181,7 @@ export default function Router() {
         <Route path="/sampleapps/shopcart" element={<ShoppingCart />} />
         <Route path="/games/tictactoe" element={<TicTacToe />} />
         <Route path="/sampleapps/stopwatch" element={<StopWatch />} />
+        <Route path="/challenges/maxcount" element={<MaxCount />} />
       </Routes>
     </BrowserRouter>
   );
